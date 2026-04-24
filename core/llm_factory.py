@@ -108,8 +108,6 @@ class LocalHFLLM(BaseLLM):
             self._model = AutoModelForCausalLM.from_pretrained(
                 self.model,
                 dtype=torch.float32,
-                device_map="cpu",
-                low_cpu_mem_usage=False,
             )
 
     def _infer(self, messages) -> str:

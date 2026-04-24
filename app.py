@@ -45,7 +45,9 @@ def main():
 
     with st.sidebar:
         st.header("LLM Provider")
-        provider_label = st.selectbox("Select provider", list(PROVIDERS.keys()))
+        env_provider = os.getenv("LLM_PROVIDER", "local_hf")
+        default_label = next((k for k, v in PROVIDERS.items() if v == env_provider), list(PROVIDERS.keys())[0])
+        provider_label = st.selectbox("Select provider", list(PROVIDERS.keys()), index=list(PROVIDERS.keys()).index(default_label))
         provider = PROVIDERS[provider_label]
 
         if provider == "gemini":
