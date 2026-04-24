@@ -16,6 +16,16 @@ Built with **CrewAI** agents, **FAISS** vector search, and **Streamlit**.
 
 ---
 
+## 🚀 Live Demo
+
+**[Try it here → huggingface.co/spaces/AdamRuane99/hiring-agent-pipeline](https://huggingface.co/spaces/AdamRuane99/hiring-agent-pipeline)**
+
+> **Note on uptime:** The demo runs on HuggingFace Spaces free tier, which sleeps after 48 hours of inactivity. If the Space shows as paused, just click **Restart** on the Space page — it'll be back up in under a minute.
+>
+> **No API key needed.** The demo runs entirely on free, open-source models. It defaults to **Qwen2.5-0.5B-Instruct** running directly on CPU via HuggingFace Transformers — no external API calls, no cost. Each pipeline run takes 1–3 minutes on the free CPU tier. For faster results, switch to the **HuggingFace Inference API** provider in the sidebar (free token required).
+
+---
+
 ## What It Does
 
 Upload a job description and a set of CVs. The pipeline runs three specialised agents in sequence:
