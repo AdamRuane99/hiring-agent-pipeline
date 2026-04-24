@@ -13,7 +13,7 @@ EXPOSE 7860
 HEALTHCHECK CMD curl --fail http://localhost:7860/_stcore/health || exit 1
 
 # Override at runtime: docker run -e LLM_PROVIDER=openai -e OPENAI_API_KEY=sk-xxx ...
-ENV LLM_PROVIDER=hf_api
+ENV LLM_PROVIDER=local_hf
 
 CMD ["streamlit", "run", "app.py", \
      "--server.port=7860", \
