@@ -1,0 +1,25 @@
+# Core pipeline
+crewai>=0.51.0
+langchain>=0.2.0
+langchain-community>=0.2.0
+langchain-openai>=0.1.0
+
+# Embeddings + vector store (always local, no API key)
+sentence-transformers>=2.7.0
+faiss-cpu>=1.8.0
+
+# Local HuggingFace inference
+transformers>=4.40.0
+torch>=2.2.0
+
+# Google Gemini
+google-genai>=1.0.0
+
+# UI
+streamlit>=1.35.0
+
+# Config / parsing
+python-dotenv>=1.0.0
+pdfminer.six>=20221105
+pyyaml>=6.0.1
+numpy>=1.26.0
