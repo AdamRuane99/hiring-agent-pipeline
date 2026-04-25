@@ -583,9 +583,11 @@ def main():
             os.environ["HUGGINGFACE_API_TOKEN"] = st.text_input(
                 "HuggingFace Token", type="password", value=os.getenv("HUGGINGFACE_API_TOKEN", "")
             )
-            os.environ["HF_MODEL"] = st.text_input(
-                "Model ID", value=os.getenv("HF_MODEL", "HuggingFaceH4/zephyr-7b-beta")
+            api_model = st.text_input(
+                "Model ID", value=os.getenv("HF_API_MODEL", "mistralai/Mistral-7B-Instruct-v0.3")
             )
+            os.environ["HF_API_MODEL"] = api_model
+            os.environ["HF_MODEL"] = api_model
 
         elif provider == "local_hf":
             os.environ["HF_MODEL"] = st.text_input(
